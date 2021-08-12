@@ -1,0 +1,562 @@
+/* #39FF14-green #08fdd8-blue #FF3131-red */
+
+*{
+  margin : 0;
+  padding : 0;
+}
+html {
+      scroll-behavior: smooth;
+}
+body{
+  margin: 3em 10em 10px 10em;
+  background-color: #090909;
+
+}
+.first-page{
+  height: 300px;
+}
+.diamond{
+  text-align: center;
+}
+.navbar{
+  color: red;
+  height: 20px;
+}
+/* this is the 1st div which has the text and heading */
+.text1{
+  padding:0 3em 0 1em;
+  font-family: 'Krona One', sans-serif;
+  font-size: 1em;
+  color: #FF3131;
+  position: relative;
+  bottom: 1.9em;
+  right: 24em;
+}
+.text2{
+  color: #FF3131;
+  /* font-family: 'Krona One', sans-serif; */
+  font-family: 'Unica One', cursive;
+  font-size: 7.3em;
+  position: relative;
+  bottom: 0.5em;
+  right: 2.24em;
+  animation: moveright linear 0.7s;
+  animation-delay: 0.3s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+
+}
+@keyframes moveright {
+  0%{
+    transform: translateX(200px);
+    letter-spacing: 20px;
+    visibility:visible;
+  }
+   100%{
+    transform: translateX(0);
+    letter-spacing: normal;
+    visibility: visible;
+  }
+}
+.text2:hover{
+  transition: 1s ease-in-out;
+  color: #08fdd8;
+}
+.gif1{
+  position: relative;
+  bottom: 3.2em;
+  right: 7.2em;
+  animation: guru linear 2.06s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+
+}
+@keyframes guru {
+  from{transform: translate(-10px);}
+  to{transform:translate(2px); }
+  from{ visibility: visible;}
+  to{ visibility: hidden;}
+}
+.outer1{
+ margin-top: 150px;
+ height: 100px;
+ transform: skewY(-21deg);
+}
+.inner1{
+  display: flex;
+  padding: 2em;
+  margin: auto;
+  text-align: center;
+  /* transform: skewY(21deg); */
+}
+.gif{
+  width: 50%;
+}
+.text{
+  width: 50%;
+}
+/* second div with text and heading */
+.outer{
+  background-color: #FF3131;
+  color:black;
+  padding: auto;
+  height: 170px;
+  transform: skewY(-21deg);
+  display: flex;
+}
+.text3{
+  /* font-family: 'Krona One', sans-serif; */
+  font-family: 'Unica One', cursive;
+  font-size: 5em;
+  letter-spacing: 8px;
+  animation: bounce linear 0.7s;
+  animation-delay: 1.2s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  position: relative;
+  bottom: 0.2em;
+}
+@keyframes bounce {
+  0%{
+    word-spacing: normal;
+    visibility:visible;
+  }
+  35%{
+    letter-spacing: 10px;
+    visibility:visible;
+  }
+   100%{
+    letter-spacing: normal;
+    visibility: visible;
+  }
+}
+.text4{
+  font-family: 'Krona One', sans-serif;
+  padding:0 0 0 1em;
+    font-size: 1.05em;
+    position: relative;
+    bottom:1em;
+}
+.inner{
+  width: 43.3%;
+  text-align: center;
+  margin: auto;
+  transform: skewY(21deg);
+}
+.contact{
+  width: 35.3%;
+  background-color: #FF3131 ;
+}
+.contactbtn{
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Unica One', cursive;
+  color: #FF3131;
+  width: 100%;
+  height: 100%;
+  background-color: #FF3131;
+  border: none;
+
+}
+.contactbtn:hover{
+  cursor: pointer;
+  background-color: #39FF14;
+  color: black;
+  transition: 0.5s ease-out
+}
+
+.about{
+  width:38%;
+  background-color:  #FF3131;
+}
+.button1{
+  color: white;
+  background-color: black;
+  width: 0;
+  height: 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-bottom: none;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid #FF3131;
+  position: relative;
+  left:50em;
+  top:4em;
+  transform: rotate(-25deg);
+}
+.scroll{
+  position: absolute;
+  height: 40px;
+  transform: rotate(180deg);
+  bottom: 2em;
+  right: 10.5em;
+}.scroll:hover{
+  opacity: 0.5;
+}
+.scrolll{
+  margin: 0 0 0 61.4em;
+  height: 40px;
+  transform: rotate(180deg);
+}
+.scrolll:hover{
+  opacity: 0.5;
+}
+
+
+.first-page{
+  height: 650px;
+}
+
+/* this is  the  projects page. */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.theactualMP{
+  margin: 3.5em 0;
+}
+.megaproject{
+  margin: 2em 0;
+  display: flex;
+  align-items: center;
+}
+.flip-card {
+
+  width: 33.3%;
+  background-color: transparent;
+  padding: 1em;
+  width: 320px;
+  height: 180px;
+  perspective: 1000px;
+  border-radius: 3px;/* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border-radius: 3px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 3px;
+}
+.im{
+  border-radius: 25px;
+}
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 20px;
+}
+
+/* Style the back side */
+.flip-card-back {
+ font-family: 'Unica One', cursive;
+ border-radius: 20px;
+  background-color: #08fdd8;
+  color: black;
+  transform: rotateY(180deg);
+}
+.fliptitle{
+  font-size: 1.7em;
+  font-weight: bold;
+}
+.pra{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* this is the aboout me section. */
+.text5{
+  color:  #FF3131;
+  font-family: 'Unica One', cursive;
+  font-size: 3em;
+  display: inline;
+}
+.me{
+  color:#08fdd8;
+}
+.about-title{
+  margin: 3.5em 0;
+  display: flex;
+}
+.para1{
+  padding:0 10px 0 10px;
+  color: white;
+  font-family: "Open Sans",sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.about-title1{
+ width: 50%;
+ height: 350px;
+}
+.about-title2{
+  margin: 2em 0 0 0 ;
+  background-color: #090909;
+  width: 50%;
+  height: 350px;
+
+}
+.a1{
+  padding: 20px 0 0 0;
+  transform: skewy(-20deg);
+  background-color: #08fdd8;
+  width: 98%;
+  height: 50px;
+  margin-bottom: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #08fdd8;
+}
+.a1:hover{
+  transition: 0.5s ease-out;
+  background-color: #090909;
+  color: #08fdd8;
+}
+.a2{
+  text-align: center;
+  padding: 20px 0 0 0;
+  transform: skewy(-20deg);
+  background-color:  #FF3131;
+  width: 98%;
+  height: 50px;
+  margin-bottom: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FF3131;
+}
+.a2:hover{
+  transition: 0.5s ease-out;
+  background-color: #090909;
+    color: #FF3131;
+}
+.a3{
+  text-align: center;
+  padding: 20px 0 0 0;
+  transform: skewy(-20deg);
+  background-color: #39FF14 ;
+  width: 98%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #39FF14 ;
+}
+.a3:hover{
+  transition: 0.5s ease-out;
+  background-color: black;
+    color:#39FF14 ;
+}
+.a1font{
+  word-spacing: 8px;
+  text-align: center;
+  font-family: 'Unica One', cursive;
+  font-weight: 1.5em;
+}
+/* this is the form area. */
+.contactme{
+  margin: 3em 0 0 0;
+  display: flex;
+
+}
+.abtme1{
+  width: 50%
+}
+.abtme2{
+  width: 50%;
+}
+/* .label{
+  font-family: 'Unica One', cursive;
+  font-size: 2.3em;
+} */
+
+.inpput{
+  padding-left: 1px;
+  font-family: 'Unica One', cursive;
+  font-size: 1.4em;
+  margin-bottom:6px;
+  width: 98%;
+  height: 2.3em;
+  /* background-image: linear-gradient(45deg, #08fdd8,red); */
+  background-image: linear-gradient(45deg, #161616,#161616);
+  color: #08fdd8 ;
+  border: none;
+  cursor: pointer;
+}
+
+.inpput:hover{
+  background-image: linear-gradient(45deg, black, black);
+  color: #08fdd8;
+  border-style: solid;
+  border-width:0 0 2px 0;
+  border-color:#08fdd8;
+
+}
+
+form{
+  text-align: center;
+
+  margin:30px 10px;
+}
+
+.form1, .form2, .form3{
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+}
+
+.textfield{
+  caret-color: #08fdd8;
+  font-family: 'Unica One', cursive;
+  font-size: 1.4em;
+  background-image: linear-gradient(45deg, #161616,#161616);
+  border: 0;
+
+  width: 98%;
+  color: #08fdd8;
+}
+.textfield:hover{
+  background-image: linear-gradient(45deg, black, black);
+  color: #08fdd8;
+  border-style: solid;
+  border-width:0 0 2px 0;
+  border-color:#08fdd8;
+}
+
+.formbtn{
+  margin: 10px 0;
+  background-image: linear-gradient(45deg, #161616,#161616);
+  width: 98%;
+  font-family: 'Unica One', cursive;
+  font-size: 1.4em;
+  height: 2.3em;
+  padding: 5px;
+  border-color: #08fdd8;
+  border-width: 1px;
+  color: #08fdd8;
+}
+.formbtn:hover{
+
+  background-image: linear-gradient(45deg, black, black);
+  color: #39FF14;
+  border-style: solid;
+  border-width:0 0 1px 0;
+  border-color:#39FF14;
+
+}
+.details{
+  font-family: 'Unica One', cursive;
+  padding: 50px;
+  margin: 60px 70px;
+  text-align: center;
+  font-size: 1em;
+  background-color: #08fdd8;
+
+}
+.socials{
+  text-align: center;
+ margin: 0 70px;
+}
+.social1{
+ margin: 10px;
+}
+.social1:hover{
+   opacity: 0.3;
+}
+
+.im{
+  height: 180px;
+  width: 320px;
+}
+@media only screen and (max-width: 450px) {
+body{
+  margin: 14.5em 1em 0 1em;
+}
+.first-page{
+  height: 500px;
+}
+
+.flip-card{
+  width: 100%;
+
+}
+.im{
+  width: 100%;
+}
+.gif1{
+  display: none;
+height: 40px;
+bottom: -1em;
+right: 5.1em;
+}
+
+.text1{
+  right:10em;
+}
+.text2{
+  font-size: 5em;
+  right: 1.7em;
+}
+.text3{
+  font-size: 3em;
+}
+.text4{
+  font-size: 1em;;
+}
+.outer{
+  height: 110px;
+}
+.contact, .about{
+  display: none;
+}
+.scroll, .scrolll{
+  display : none;
+}
+
+
+.megaproject{
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title{
+  flex-direction: column;
+  align-items: center;
+}
+.about-title1{
+  width: 100%;
+}
+.about-title2{
+  margin: 3.5em 0 0 0;
+  width: 100%;
+}
+
+.contactme{
+  flex-direction: column;
+}
+.abtme1{
+  width: 100%
+}
+.abtme2{
+  width: 100%;
+}
+.details{
+  padding: 5em;
+  font-size: 0.5em;
+}
+}
